@@ -23,6 +23,7 @@
 
 #download_button {
   transition: transform 1s ease;
+  margin-right: 30px;
 }
 
 #download_button:hover {
