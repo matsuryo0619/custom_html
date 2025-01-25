@@ -4,11 +4,12 @@ header_main.id = "header";
 
 // ヘッダーにタイトル文字を追加
 const header_text = document.createElement("p");
-header_text.id = "title_text"
+header_text.id = "title_text";
 header_text.textContent = "HTML実行環境";
 
 // ヘッダーにダウンロードボタン（アイコン）を追加
 const header_download = document.createElement("i");
+header_download.id = "download_button";
 header_download.classList.add("fa-solid", "fa-download"); // Font Awesome のアイコンを追加
 
 // ヘッダーに子要素を移動
