@@ -29,15 +29,3 @@ header_margin.id = "header_margin";
 
 // ヘッダーの間隔を開けるp要素をページに追加（既存のHTMLの前に追加）
 document.body.insertBefore(header_margin, header_main);
-
-// ヘッダーの高さを設定
-window.addEventListener("load", function() {
-  const header = document.getElementById("header");
-  const headerMargin = document.getElementById("header_margin");
-
-  // 少し遅らせて高さを取得
-  setTimeout(function() {
-    const headerHeight = header.offsetHeight;
-    headerMargin.style.height = `${headerHeight}px`;
-  }, 0);  // 0ms遅延させて処理
-});
