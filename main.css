@@ -23,3 +23,15 @@
   user-select: none;
   font-size: 20px;
 }
+
+#html {
+  background-color: #ffe330;
+}
+
+#css  {
+  background-color: #30b3ff;
+}
+
+#js {
+  background-color: #f28449;
+}
