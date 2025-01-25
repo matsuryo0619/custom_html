@@ -1,14 +1,22 @@
+/* コンテンツ全体を横並びに配置 */
+#content {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* 各要素のスタイル */
 .type_text {
   display: flex;
   align-items: center;
-  padding: 0;
-  margin: 0;
-  margin-right: 30%;
+  width: 30%;
   border-left: dashed #565656;
   user-select: none;
   font-size: 20px;
+  padding-left: 10px;
+  box-sizing: border-box;
 }
 
+/* アイコンのスタイル */
 .img_icon {
   margin-right: 10px;
   border-radius: 5px;
