@@ -20,14 +20,17 @@ style_link.rel = "stylesheet";
 style_link.href = "header.css";
 document.head.appendChild(style_link);
 
-// ヘッダーをページに追加
-document.body.appendChild(header_main);
+// ヘッダーをページに追加（既存のHTMLの前に追加）
+document.body.insertBefore(header_main, document.body.firstChild);
 
-//ヘッダーの間隔を開けるようのp要素を追加
+// ヘッダーの間隔を開けるようのp要素を追加
 const header_margin = document.createElement("p");
 header_margin.id = "header_margin";
 
-document.body.appendChild(header_margin);
+// ヘッダーの間隔を開けるp要素をページに追加（既存のHTMLの前に追加）
+document.body.insertBefore(header_margin, header_main);
+
+// ヘッダーの高さを設定
 window.addEventListener("load", function() {
   const header = document.getElementById("header");
   const headerMargin = document.getElementById("header_margin");
