@@ -1,2 +1,3 @@
 //ヘッダーを追加
-document.createElement("header");
+const header = document.createElement("header");
+header.textcontent = "HTML実行環境";
