@@ -35,7 +35,9 @@ window.addEventListener("load", function() {
   const header = document.getElementById("header");
   const headerMargin = document.getElementById("header_margin");
 
-  // #header の高さを取得し、#header_margin に設定
-  const headerHeight = header.offsetHeight;
-  headerMargin.style.height = `${headerHeight}px`;
+  // 少し遅らせて高さを取得
+  setTimeout(function() {
+    const headerHeight = header.offsetHeight;
+    headerMargin.style.height = `${headerHeight}px`;
+  }, 0);  // 0ms遅延させて処理
 });
