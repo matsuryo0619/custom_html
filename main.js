@@ -15,6 +15,6 @@ header_main.appendChild(header_download);
 
 //ヘッダーのスタイルを読み込む
 const style_link = document.createElement("link");
-style_link.rel = "stylesheet"
-style_link.href = "header.css"
-document.head.appendChild(style_link)
+style_link.rel = "stylesheet";
+style_link.href = "header.css";
+document.head.appendChild(style_link);
