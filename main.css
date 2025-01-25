@@ -1,5 +1,6 @@
 .type_text {
-  display: inline-block;
+  display: flex;
+  align-items: center;
   padding: 0;
   margin: 0;
   margin-right: 30%;
@@ -9,9 +10,8 @@
 }
 
 .img_icon {
-  padding: 0;
-  margin: 10px;
+  margin-right: 10px;
   border-radius: 5px;
   user-select: none;
-  font-size: 10px;
+  font-size: 20px;
 }
