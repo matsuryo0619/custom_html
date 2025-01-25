@@ -22,7 +22,7 @@
 }
 
 #download_button {
-  transition: scale 1s ease;
+  transition: transform 1s ease;
 }
 
 #download_button:hover {
