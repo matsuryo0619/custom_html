@@ -13,9 +13,24 @@ header_download.id = "download_button";
 header_download.title = "ファイルをダウンロード"
 header_download.classList.add("fa-solid", "fa-download"); // Font Awesome のアイコンを追加
 
+//ヘッダーにモード選択用のボタンを追加
+const mode_button = document.createElement("label");
+mode_button.class = "mode_switch";
+
+const mode_check = document.createElement("input");
+mode_check.type = "checkbox";
+
+const mode_span = document.createElement("span");
+mode_span.class = "slider"
+
+//input,spanをlabelに追加
+mode_button.appendChild(mode_check);
+mode_button.appendChild(mode_span);
+
 // ヘッダーに子要素を移動
 header_main.appendChild(header_text);
 header_main.appendChild(header_download);
+header_main.appendChild(mode_button);
 
 // ヘッダーのスタイルを読み込む
 const style_link = document.createElement("link");
