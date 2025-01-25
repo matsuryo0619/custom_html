@@ -1,1 +1,5 @@
-
+.type_text {
+  display: inline-block;
+  margin-right: 30%;
+  user-select: none;
+}
