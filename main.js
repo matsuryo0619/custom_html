@@ -25,4 +25,6 @@ document.body.appendChild(header_main);
 
 //ヘッダーの間隔を開けるようのp要素を追加
 const header_margin = document.createElement("p");
-header_margin.id = ""
+header_margin.id = "header_margin";
+
+document.body.appendChild(header_margin);
