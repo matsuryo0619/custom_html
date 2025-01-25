@@ -1,7 +1,9 @@
 .type_text {
   display: inline-block;
+  padding: 0;
   margin: 0;
   margin-right: 30%;
   border-left: dashed #565656;
   user-select: none;
+  font-size: 20px;
 }
