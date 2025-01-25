@@ -1,1 +1,1 @@
-# custom_html
+# Custom HTML editor
