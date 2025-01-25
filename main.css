@@ -2,5 +2,6 @@
   display: inline-block;
   margin: 0;
   margin-right: 30%;
+  border-right: dashed #858585;
   user-select: none;
 }
