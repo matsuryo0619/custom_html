@@ -22,3 +22,7 @@ document.head.appendChild(style_link);
 
 // ヘッダーをページに追加
 document.body.appendChild(header_main);
+
+//ヘッダーの間隔を開けるようのp要素を追加
+const header_margin = document.createElement("p");
+header_margin.id = ""
