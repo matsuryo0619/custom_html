@@ -66,8 +66,3 @@ html, body {
 #js {
   background-color: #f28449;
 }
-
-/* iframeの表示制御（非表示時） */
-#mode_span.frame_hide #result {
-  display: none;
-}
