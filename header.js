@@ -26,6 +26,7 @@ const mode_span = document.createElement("span");
 mode_span.className = "slider";
 mode_span.id = "mode_span";
 mode_span.title = "実行結果を非表示";
+mode_span.addEventListener("click", result_update);
 
 // input, spanをlabelに追加
 mode_button.appendChild(mode_check);
