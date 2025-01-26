@@ -68,3 +68,7 @@ html, body {
 #js {
   background-color: #f28449;
 }
+
+.textarea {
+  max-height: 50%;
+}
