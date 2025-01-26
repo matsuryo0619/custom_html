@@ -29,6 +29,13 @@ mode_span.addEventListener("click", () => {
   // title を切り替え
   mode_span.setAttribute("title", currentTitle === "実行結果を表示" ? "実行結果を非表示" : "実行結果を表示");
   mode_span.classList.toggle("frame_hide");
+  //フレームの表示･非表示を切り替え
+  const frame = document.getElementById("result");
+  if (frame.style.display === "block") {
+    frame.style.display = "none";
+  } else {
+    frame.style.display = "block";
+  }
 });
 
 // input, spanをlabelに追加
