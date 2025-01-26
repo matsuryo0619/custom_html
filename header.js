@@ -49,16 +49,19 @@ document.body.insertBefore(header_main, document.body.firstChild);
 setInterval(() => {
   result_update();
 }, 1000); //1秒ごとに更新
-
 function result_update() {
   const checkbutton = document.getElementById("result_toggle");
   const span_title = document.getElementById("mode_span");
   const frame = document.getElementById("result");
+  const content = document.getElementById("content");
+
   if (checkbutton.checked) {
     frame.style.display = "block";
+    content.style.height = "calc(50% - 90px)";  // 画面の半分の高さを維持
     span_title.title = "実行結果を非表示";
   } else {
     frame.style.display = "none";
+    content.style.height = "calc(100% - 90px)"; // iframeなしで全画面表示
     span_title.title = "実行結果を表示";
   }
 }
