@@ -51,7 +51,8 @@ html, body {
   font-size: 20px;
   width: 30px;
   height: 30px;
-  text-align: center;
+  display: flex;
+  align-items: center;
 }
 
 /* 各アイコンの色設定 */
