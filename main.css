@@ -18,18 +18,25 @@ html, body {
 #content {
   display: flex;
   justify-content: space-between;
-  flex: 1; /* 画面の50% */
+  flex: 1;
   margin-top: 90px;
   padding: 20px;
   box-sizing: border-box;
-  height: calc(50% - 90px); /* 画面の50%からマージンを引いた高さ */
+  height: calc(50% - 90px); /* 画面の50%からヘッダーの高さを引いたサイズ */
+}
+
+/* iframe 非表示時のレイアウト調整 */
+.no-iframe #content {
+  height: calc(100% - 90px); /* ヘッダーの高さ分を除いた100%表示 */
+  margin-top: 90px;
+  flex: none;
 }
 
 /* HTML/CSS/JSエリアのスタイル */
 .type_text {
   display: flex;
   flex-direction: column; /* 要素を縦に並べる */
-  justify-content: flex-start; /* 文字の位置を左寄せ */
+  justify-content: flex-start;
   width: 30%;
   border-left: dashed #565656;
   user-select: none;
@@ -40,20 +47,25 @@ html, body {
 
 /* 各コード入力エリアの最大高さ設定 */
 .textarea {
-  height: 50%; /* 親要素の50%の高さ */
-  max-height: 50%; /* 親要素に対する最大高さ */
-  overflow-y: auto; /* はみ出したらスクロール */
+  height: 50%;
+  max-height: 50%;
+  overflow-y: auto;
   padding: 10px;
   font-family: monospace;
-  white-space: pre-wrap; /* 改行やスペースを保持 */
+  white-space: pre-wrap;
   box-sizing: border-box;
 }
 
 /* 下半分のiframe表示 */
 #result {
-  flex: 1; /* 画面の50% */
+  flex: 1;
   width: 100%;
   display: block;
+}
+
+/* iframe 非表示の時、全体を非表示にする */
+.no-iframe #result {
+  display: none;
 }
 
 /* アイコンのスタイル */
