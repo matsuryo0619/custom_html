@@ -19,25 +19,13 @@ mode_button.className = "mode_switch";
 
 const mode_check = document.createElement("input");
 mode_check.type = "checkbox";
+mode_check.id="result_toggle";
 mode_check.checked = "true";
 
 const mode_span = document.createElement("span");
 mode_span.className = "slider";
+mode_span.id = "mode_span";
 mode_span.title = "実行結果を非表示";
-mode_span.addEventListener("click", () => {
-  // 現在のタイトルを取得
-  const currentTitle = mode_span.getAttribute("title");
-  // title を切り替え
-  mode_span.setAttribute("title", currentTitle === "実行結果を非表示" ? "実行結果を表示" : "実行結果を非表示");
-  mode_span.classList.toggle("frame_hide");
-  //フレームの表示･非表示を切り替え
-  const frame = document.getElementById("result");
-  if (frame.style.display === "none") {
-    frame.style.display = "block";
-  } else {
-    frame.style.display = "none";
-  }
-});
 
 // input, spanをlabelに追加
 mode_button.appendChild(mode_check);
@@ -63,3 +51,17 @@ header_margin.id = "header_margin";
 
 // ヘッダーの間隔を開けるp要素をヘッダーの後に追加
 document.body.insertBefore(header_margin, header_main.nextSibling);
+
+//結果の表示を定期的に更新
+setInterval(() => {
+  const checkbutton = document.getElementById("result_toggle");
+  const span_title = document.getElementById("mode_span");
+  const frame = document.getElementById("result");
+  if (checkbutton.checked) {
+    frame.style.display = "block";
+    span_title.title = "実行結果を非表示";
+  } else {
+    frame.style.display = "none";
+    span_title.title = "実行結果を表示";
+  }
+}, 1000); //1秒ごとに更新
