@@ -23,12 +23,12 @@ mode_check.checked = "true";
 
 const mode_span = document.createElement("span");
 mode_span.className = "slider";
-mode_span.title = "実行結果を表示";
+mode_span.title = "実行結果を非表示";
 mode_span.addEventListener("click", () => {
   // 現在のタイトルを取得
   const currentTitle = mode_span.getAttribute("title");
   // title を切り替え
-  mode_span.setAttribute("title", currentTitle === "実行結果を表示" ? "実行結果を非表示" : "実行結果を表示");
+  mode_span.setAttribute("title", currentTitle === "実行結果を非表示" ? "実行結果を表示" : "実行結果を非表示");
   mode_span.classList.toggle("frame_hide");
   //フレームの表示･非表示を切り替え
   const frame = document.getElementById("result");
