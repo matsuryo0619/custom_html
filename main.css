@@ -39,8 +39,7 @@ html, body {
 #result {
   flex: 1; /* 画面の50% */
   width: 100%;
-  border: none;
-  display: block;
+  display: none;
 }
 
 /* アイコンのスタイル */
