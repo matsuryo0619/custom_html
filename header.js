@@ -19,6 +19,7 @@ mode_button.className = "mode_switch";
 
 const mode_check = document.createElement("input");
 mode_check.type = "checkbox";
+mode_check.checked = "true";
 
 const mode_span = document.createElement("span");
 mode_span.className = "slider";
