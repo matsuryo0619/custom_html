@@ -1,3 +1,4 @@
+/* 全体の基本設定 */
 html, body {
   margin: 0;
   padding: 0;
@@ -21,11 +22,13 @@ html, body {
   margin-top: 90px;
   padding: 20px;
   box-sizing: border-box;
+  height: calc(50% - 90px); /* 画面の50%からマージンを引いた高さ */
 }
 
 /* HTML/CSS/JSエリアのスタイル */
 .type_text {
   display: flex;
+  flex-direction: column; /* 要素を縦に並べる */
   justify-content: flex-start; /* 文字の位置を左寄せ */
   width: 30%;
   border-left: dashed #565656;
@@ -33,7 +36,19 @@ html, body {
   font-size: 20px;
   padding-left: 10px;
   box-sizing: border-box;
-  align-items: flex-start; /* 縦方向の中央寄せをなくす */
+}
+
+/* 各コード入力エリアの最大高さ設定 */
+.textarea {
+  height: 50%; /* 親要素の50%の高さ */
+  max-height: 50%; /* 親要素に対する最大高さ */
+  overflow-y: auto; /* はみ出したらスクロール */
+  border: 1px solid #ccc;
+  padding: 10px;
+  font-family: monospace;
+  background-color: #f5f5f5;
+  white-space: pre-wrap; /* 改行やスペースを保持 */
+  box-sizing: border-box;
 }
 
 /* 下半分のiframe表示 */
@@ -51,10 +66,9 @@ html, body {
   font-size: 20px;
   width: 30px;
   height: 30px;
-  display: block; /* 縦方向の中央寄せをなくす */
+  display: block;
   text-align: center;
 }
-
 
 /* 各アイコンの色設定 */
 #html {
@@ -67,8 +81,4 @@ html, body {
 
 #js {
   background-color: #f28449;
-}
-
-.textarea {
-  max-height: 50%;
 }
