@@ -45,15 +45,11 @@ document.head.appendChild(style_link);
 // ヘッダーをページに追加（既存のHTMLの前に追加）
 document.body.insertBefore(header_main, document.body.firstChild);
 
-// ヘッダーの間隔を開けるようのp要素を追加
-const header_margin = document.createElement("p");
-header_margin.id = "header_margin";
-
-// ヘッダーの間隔を開けるp要素をヘッダーの後に追加
-document.body.insertBefore(header_margin, header_main.nextSibling);
-
-//結果の表示を定期的に更新
 setInterval(() => {
+  result_update();
+}, 1000); //1秒ごとに更新
+
+function result_update() {
   const checkbutton = document.getElementById("result_toggle");
   const span_title = document.getElementById("mode_span");
   const frame = document.getElementById("result");
@@ -64,4 +60,4 @@ setInterval(() => {
     frame.style.display = "none";
     span_title.title = "実行結果を表示";
   }
-}, 1000); //1秒ごとに更新
+}
