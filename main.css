@@ -38,3 +38,7 @@
 #js {
   background-color: #f28449;
 }
+
+#result .frame_hide {
+  display: none;
+}
