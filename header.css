@@ -9,11 +9,9 @@
   font-size: 18px;
   font-weight: bold;
   border-bottom: 2px solid #555;
-}
-
-#header_margin {
-  padding: 0px;
-  margin: 90px;
+  background-color: #333;
+  color: white;
+  box-sizing: border-box;
 }
 
 #title_text {
@@ -21,14 +19,16 @@
 }
 
 #download_button {
-  transition: transform 1s ease;
+  transition: transform 0.3s ease;
   margin-right: 30px;
+  cursor: pointer;
 }
 
 #download_button:hover {
   transform: scale(1.1);
 }
 
+/* モードスイッチの設定 */
 .mode_switch {
   position: relative;
   display: inline-block;
