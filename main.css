@@ -39,6 +39,6 @@
   background-color: #f28449;
 }
 
-#result .frame_hide {
+#mode_span.frame_hide #result {
   display: none;
 }
