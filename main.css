@@ -6,49 +6,57 @@ html, body {
   flex-direction: column;
 }
 
+/* 全体のコンテナ設定 */
+#setting {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+/* 上半分のエリア（HTML/CSS/JSセクション） */
 #content {
   display: flex;
-  justify-content: space-around;
-  align-items: center;
-  height: 50vh; /* 画面の50% */
-  margin-top: 60px; /* ヘッダー分のスペース */
+  justify-content: space-between;
+  flex: 1; /* 画面の50% */
   padding: 20px;
   box-sizing: border-box;
 }
 
-/* HTML/CSS/JS ボックスのデザイン */
+/* HTML/CSS/JSエリアのスタイル */
 .type_text {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   width: 30%;
-  height: 80%;
-  font-size: 24px;
-  border: 2px dashed #565656;
-  border-radius: 10px;
-  box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
-  background-color: #f9f9f9;
+  border-left: dashed #565656;
   user-select: none;
-  transition: all 0.3s ease;
+  font-size: 20px;
+  padding-left: 10px;
+  box-sizing: border-box;
 }
 
-/* アイコンスタイル */
+/* 下半分のiframe表示 */
+#result {
+  flex: 1; /* 画面の50% */
+  width: 100%;
+  border: none;
+  display: block;
+}
+
+/* アイコンのスタイル */
 .img_icon {
   margin-right: 10px;
   border-radius: 5px;
-  font-size: 24px;
-  width: 40px;
-  height: 40px;
-  line-height: 40px;
+  user-select: none;
+  font-size: 20px;
+  width: 30px;
+  height: 30px;
   text-align: center;
-  font-weight: bold;
-  color: #fff;
 }
 
-/* 各セクションごとの色設定 */
+/* 各アイコンの色設定 */
 #html {
   background-color: #ffe330;
-  color: #000;
 }
 
 #css {
@@ -59,9 +67,7 @@ html, body {
   background-color: #f28449;
 }
 
-/* iframeの設定 */
-#result {
-  flex-grow: 1;
-  border: none;
-  height: 50vh; /* 残りの50% */
+/* iframeの表示制御（非表示時） */
+#mode_span.frame_hide #result {
+  display: none;
 }
