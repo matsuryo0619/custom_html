@@ -28,6 +28,7 @@ mode_span.addEventListener("click", () => {
   const currentTitle = mode_span.getAttribute("title");
   // title を切り替え
   mode_span.setAttribute("title", currentTitle === "実行結果を表示" ? "実行結果を非表示" : "実行結果を表示");
+  mode_span.classList.toggle("frame_display");
 });
 
 // input, spanをlabelに追加
