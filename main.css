@@ -43,10 +43,8 @@ html, body {
   height: 50%; /* 親要素の50%の高さ */
   max-height: 50%; /* 親要素に対する最大高さ */
   overflow-y: auto; /* はみ出したらスクロール */
-  border: 1px solid #ccc;
   padding: 10px;
   font-family: monospace;
-  background-color: #f5f5f5;
   white-space: pre-wrap; /* 改行やスペースを保持 */
   box-sizing: border-box;
 }
