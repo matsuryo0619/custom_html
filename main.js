@@ -9,5 +9,5 @@ js.addEventListener("input", resultchange);
 
 //変更用コード
 function resultchange() {
-  
+  const html_code = document.getElementById("html_code");
 }
