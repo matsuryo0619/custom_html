@@ -25,14 +25,14 @@ html, body {
 /* HTML/CSS/JSエリアのスタイル */
 .type_text {
   display: flex;
-  align-items: center;
-  justify-content: flex-start;
+  justify-content: flex-start; /* 文字の位置を左寄せ */
   width: 30%;
   border-left: dashed #565656;
   user-select: none;
   font-size: 20px;
   padding-left: 10px;
   box-sizing: border-box;
+  align-items: flex-start; /* 縦方向の中央寄せをなくす */
 }
 
 /* 下半分のiframe表示 */
@@ -51,9 +51,9 @@ html, body {
   font-size: 20px;
   width: 30px;
   height: 30px;
-  display: flex;
-  align-items: center;
+  display: block; /* 縦方向の中央寄せをなくす */
 }
+
 
 /* 各アイコンの色設定 */
 #html {
