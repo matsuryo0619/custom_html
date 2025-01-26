@@ -1,37 +1,57 @@
-/* コンテンツ全体を横並びに配置 */
-#content {
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
 }
 
-/* 各要素のスタイル */
-.type_text {
+#content {
   display: flex;
+  justify-content: space-around;
   align-items: center;
-  width: 30%;
-  border-left: dashed #565656;
-  user-select: none;
-  font-size: 20px;
-  padding-left: 10px;
+  height: 50vh; /* 画面の50% */
+  margin-top: 60px; /* ヘッダー分のスペース */
+  padding: 20px;
   box-sizing: border-box;
 }
 
-/* アイコンのスタイル */
+/* HTML/CSS/JS ボックスのデザイン */
+.type_text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30%;
+  height: 80%;
+  font-size: 24px;
+  border: 2px dashed #565656;
+  border-radius: 10px;
+  box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+  background-color: #f9f9f9;
+  user-select: none;
+  transition: all 0.3s ease;
+}
+
+/* アイコンスタイル */
 .img_icon {
   margin-right: 10px;
   border-radius: 5px;
-  user-select: none;
-  font-size: 20px;
-  width: 30px;
-  height: 30px;
+  font-size: 24px;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
   text-align: center;
+  font-weight: bold;
+  color: #fff;
 }
 
+/* 各セクションごとの色設定 */
 #html {
   background-color: #ffe330;
+  color: #000;
 }
 
-#css  {
+#css {
   background-color: #30b3ff;
 }
 
@@ -39,6 +59,9 @@
   background-color: #f28449;
 }
 
-#mode_span.frame_hide #result {
-  display: none;
+/* iframeの設定 */
+#result {
+  flex-grow: 1;
+  border: none;
+  height: 50vh; /* 残りの50% */
 }
