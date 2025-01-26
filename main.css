@@ -52,6 +52,7 @@ html, body {
   width: 30px;
   height: 30px;
   display: block; /* 縦方向の中央寄せをなくす */
+  text-align: center;
 }
 
 
