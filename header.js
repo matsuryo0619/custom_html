@@ -32,10 +32,10 @@ mode_span.addEventListener("click", () => {
   mode_span.classList.toggle("frame_hide");
   //フレームの表示･非表示を切り替え
   const frame = document.getElementById("result");
-  if (frame.style.display === "block") {
-    frame.style.display = "none";
-  } else {
+  if (frame.style.display === "none") {
     frame.style.display = "block";
+  } else {
+    frame.style.display = "none";
   }
 });
 
