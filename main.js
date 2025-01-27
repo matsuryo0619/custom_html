@@ -8,11 +8,11 @@ js.addEventListener("input", resultchange);
 
 //変更用コード
 function resultchange() {
-  const html_code = document.getElementById("html_code");
-  const css_code = document.getElementById("css_code");
-  const js_code = document.getElementById("js_code");
+  const html_code = document.getElementById("html_code").value;
+  const css_code = document.getElementById("css_code").value;
+  const js_code = document.getElementById("js_code").value;
   const result_iframe = document.getElementById("result");
-  result_frame.srcdog = 
+  result_iframe.srcdoc = 
    `<!DOCTYPE html>
     <html>
       <head>
